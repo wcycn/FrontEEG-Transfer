@@ -1,0 +1,5 @@
+# Minimal dependencies for PsychoPy display and two-channel LSL acquisition.
+numpy>=1.24
+PyYAML>=6.0
+pylsl==1.18.2
+psychopy==2026.2.3

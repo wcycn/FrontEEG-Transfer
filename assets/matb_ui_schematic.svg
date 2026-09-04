@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#111827"/>
+  <text x="600" y="36" text-anchor="middle" fill="#f3f4f6"
+        font-family="Arial, sans-serif" font-size="24" font-weight="bold">
+    MATB-LITE TASK VIEW (SCHEMATIC)
+  </text>
+  <text x="600" y="62" text-anchor="middle" fill="#9ca3af"
+        font-family="Arial, sans-serif" font-size="15">
+    Active panels must be monitored concurrently
+  </text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="28" y="82" width="555" height="295" rx="10" fill="#1f2937"
+          stroke="#9aa4b2" stroke-width="2"/>
+    <text x="305" y="114" text-anchor="middle" fill="#f3f4f6"
+          font-size="21" font-weight="bold">SYSTEM MONITORING</text>
+    <g font-size="17" text-anchor="middle" fill="#ffffff">
+      <rect x="85" y="145" width="110" height="68" rx="4" fill="#1f9d55"/>
+      <text x="140" y="174">1</text><text x="140" y="198">LIGHT</text>
+      <rect x="250" y="145" width="110" height="68" rx="4" fill="#dc2626"/>
+      <text x="305" y="174">2</text><text x="305" y="198">LIGHT</text>
+      <rect x="415" y="145" width="110" height="68" rx="4" fill="#1f9d55"/>
+      <text x="470" y="174">3</text><text x="470" y="198">GAUGE</text>
+      <rect x="85" y="235" width="110" height="68" rx="4" fill="#1f9d55"/>
+      <text x="140" y="264">4</text><text x="140" y="288">GAUGE</text>
+      <rect x="250" y="235" width="110" height="68" rx="4" fill="#1f9d55"/>
+      <text x="305" y="264">5</text><text x="305" y="288">GAUGE</text>
+      <rect x="415" y="235" width="110" height="68" rx="4" fill="#1f9d55"/>
+      <text x="470" y="264">6</text><text x="470" y="288">GAUGE</text>
+    </g>
+    <text x="305" y="344" text-anchor="middle" fill="#d1d5db" font-size="16">
+      Press 1-6 when the matching indicator turns red
+    </text>
+
+    <rect x="617" y="82" width="555" height="295" rx="10" fill="#1f2937"
+          stroke="#9aa4b2" stroke-width="2"/>
+    <text x="895" y="114" text-anchor="middle" fill="#f3f4f6"
+          font-size="21" font-weight="bold">TRACKING</text>
+    <rect x="700" y="137" width="390" height="174" fill="#0b1220"
+          stroke="#d1d5db" stroke-width="2"/>
+    <rect x="835" y="174" width="120" height="100" fill="none"
+          stroke="#34d399" stroke-width="4"/>
+    <circle cx="1000" cy="205" r="18" fill="#f59e0b" stroke="#f9fafb" stroke-width="2"/>
+    <path d="M982 218 C955 235 945 235 925 230" fill="none" stroke="#f59e0b"
+          stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="895" y="344" text-anchor="middle" fill="#d1d5db" font-size="16">
+      Move the mouse to keep the orange target in the green box
+    </text>
+
+    <rect x="28" y="397" width="555" height="295" rx="10" fill="#1f2937"
+          stroke="#9aa4b2" stroke-width="2"/>
+    <text x="305" y="429" text-anchor="middle" fill="#f3f4f6"
+          font-size="21" font-weight="bold">COMMUNICATIONS</text>
+    <text x="75" y="469" fill="#34d399" font-size="18" font-weight="bold">
+      YOUR CALLSIGN: EAGLE
+    </text>
+    <g fill="#d1d5db" font-size="17">
+      <text x="75" y="506">&gt; NAV1 [Z] 112.0</text>
+      <text x="75" y="536">  NAV2 [X] 114.0</text>
+      <text x="320" y="506">COM1 [C] 124.0</text>
+      <text x="320" y="536">COM2 [V] 128.0</text>
+    </g>
+    <rect x="70" y="560" width="470" height="55" rx="5" fill="#0b1220"/>
+    <text x="305" y="594" text-anchor="middle" fill="#fbbf24"
+          font-size="20" font-weight="bold">EAGLE: SET COM1 TO 124.2</text>
+    <text x="305" y="654" text-anchor="middle" fill="#d1d5db" font-size="16">
+      C, RIGHT, RIGHT, ENTER
+    </text>
+
+    <rect x="617" y="397" width="555" height="295" rx="10" fill="#1f2937"
+          stroke="#9aa4b2" stroke-width="2"/>
+    <text x="895" y="429" text-anchor="middle" fill="#f3f4f6"
+          font-size="21" font-weight="bold">RESOURCE MANAGEMENT</text>
+    <g stroke="#d1d5db" stroke-width="2">
+      <rect x="680" y="476" width="55" height="145" fill="#0b1220"/>
+      <rect x="765" y="476" width="55" height="145" fill="#0b1220"/>
+      <rect x="850" y="476" width="55" height="145" fill="#0b1220"/>
+      <rect x="935" y="476" width="55" height="145" fill="#0b1220"/>
+      <rect x="1020" y="476" width="55" height="145" fill="#0b1220"/>
+      <rect x="1105" y="476" width="55" height="145" fill="#0b1220"/>
+    </g>
+    <g fill="#3b82f6">
+      <rect x="686" y="543" width="43" height="72"/>
+      <rect x="771" y="543" width="43" height="72"/>
+      <rect x="856" y="505" width="43" height="110"/>
+      <rect x="941" y="505" width="43" height="110"/>
+      <rect x="1026" y="505" width="43" height="110"/>
+      <rect x="1111" y="505" width="43" height="110"/>
+    </g>
+    <g text-anchor="middle" fill="#f3f4f6" font-size="17">
+      <text x="707" y="465">A</text><text x="792" y="465">B</text>
+      <text x="877" y="465">C</text><text x="962" y="465">D</text>
+      <text x="1047" y="465">E</text><text x="1132" y="465">F</text>
+    </g>
+    <text x="895" y="650" text-anchor="middle" fill="#d1d5db" font-size="16">
+      A: Q/W   B: E/R   Keep A and B near 2500
+    </text>
+  </g>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>

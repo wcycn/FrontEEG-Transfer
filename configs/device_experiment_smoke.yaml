@@ -1,0 +1,57 @@
+output_root: data/private_device_sessions
+
+protocol:
+  practice_block_duration_seconds: 4.0
+  calibration_repeats_per_condition: 1
+  test_repeats_per_condition: 1
+  calibration_block_duration_seconds: 8.0
+  test_block_duration_seconds: 8.0
+  break_seconds: 0.2
+  countdown_seconds: 0
+  seed: 20260902
+
+matb:
+  sysmon_interval_seconds: [1.0, 1.5]
+  sysmon_timeout_seconds: 0.8
+  communication_interval_seconds: [1.0, 1.5]
+  communication_timeout_seconds: 0.8
+  communication_target_probability: 0.5
+  pump_failure_interval_seconds: [1.5, 2.0]
+  pump_failure_duration_seconds: 0.8
+  tracking_damping: 1.4
+  tracking_mouse_gain: 0.75
+  tank_target: 2500.0
+  tank_tolerance: 450.0
+  tank_capacity: 5000.0
+  main_tank_consumption_per_second: 20.0
+  pump_flow_per_second: 18.0
+  auxiliary_refill_per_second: 8.0
+
+device:
+  stream_name: null
+  channel_indices: [0, 1]
+  expected_channel_labels: null
+  input_unit: microvolts
+  resolve_timeout_seconds: 3.0
+  fallback_sampling_rate: 250.0
+  warmup_seconds: 0.2
+  warmup_timeout_seconds: 2.0
+  publish_markers: false
+
+display:
+  full_screen: false
+  screen: 0
+  window_size: [960, 600]
+  font: null  # Auto: Arial. Set another installed font here if needed.
+  background_color: [-0.15, -0.15, -0.15]
+  text_color: white
+  text_height: 0.055
+  symbol_height: 0.22
+
+artifact:
+  enabled: true
+  eyes_open_seconds: 4.0
+  paced_blink_seconds: 4.0
+  head_motion_seconds: 4.0
+  cue_interval_seconds: 1.0
+  cue_display_seconds: 0.2
