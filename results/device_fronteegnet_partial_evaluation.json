@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "experiment": "frozen FrontEEGNet real-device evaluation",
+  "session_id": "self01_20260902T161233",
+  "participant_pseudonym": "self01",
+  "session_status": "aborted",
+  "checkpoint": "checkpoints/final_fronteegnet_source.pt",
+  "model_config": {
+    "channels": 2,
+    "samples": 1000,
+    "temporal_filters": 8,
+    "depth_multiplier": 2,
+    "separable_filters": 16,
+    "temporal_kernel": 125,
+    "separable_kernel": 31,
+    "dropout": 0.5,
+    "spatial_mode": "learned"
+  },
+  "preprocessing": {
+    "timestamp_interpolation": "uniform 250 Hz grid inside each task block",
+    "bandpass_filter": "fourth-order zero-phase Butterworth, 1-40 Hz",
+    "normalization": "per-window per-channel z-score",
+    "target_data_used_to_update_model": false,
+    "calibration_used_only_for_quality_threshold": true
+  },
+  "recording": {
+    "samples": 276810,
+    "duration_seconds": 1109.633269699997,
+    "estimated_sampling_rate_hz": 250.00000000591172,
+    "gaps_over_2x_expected": 106,
+    "maximum_gap_seconds": 0.10678470000129892,
+    "channel_mean_microvolts": [
+      -266827.11759126297,
+      -301737.91172628565
+    ],
+    "channel_std_microvolts": [
+      18701.13906898317,
+      13283.903066991164
+    ],
+    "channel_peak_to_peak_microvolts": [
+      153582.78125,
+      73968.59375
+    ],
+    "non_finite_values": 0
+  },
+  "test_blocks": [
+    {
+      "phase": "test",
+      "block_id": "test-01",
+      "condition": "Difficult",
+      "start_timestamp": 4382.037942,
+      "end_timestamp": 4682.0425306,
+      "duration_seconds": 300.0045885999998,
+      "status": "complete"
+    },
+    {
+      "phase": "test",
+      "block_id": "test-02",
+      "condition": "Easy",
+      "start_timestamp": 4814.7463164,
+      "end_timestamp": 5031.2980004,
+      "duration_seconds": 216.55168400000002,
+      "status": "partial"
+    }
+  ],
+  "test_window_class_counts": {
+    "Difficult": 149,
+    "Easy": 107
+  },
+  "quality_rule": {
+    "method": "calibration log-RMS median + 6 scaled MAD",
+    "threshold_input_scale": [
+      513.8550123982999,
+      571.2868598154093
+    ],
+    "calibration_median_rms_input_scale": [
+      35.208425470957586,
+      37.92681059281115
+    ],
+    "calibration_windows": 91
+  },
+  "quality_rejected_test_windows": 5,
+  "all_recorded_test_windows": {
+    "examples": 256,
+    "true_class_counts": [
+      107,
+      0,
+      149
+    ],
+    "predicted_class_counts": [
+      102,
+      28,
+      126
+    ],
+    "observed_class_accuracy": 0.56640625,
+    "observed_class_balanced_accuracy": 0.5590227686131845,
+    "class_recall": {
+      "Easy": 0.514018691588785,
+      "Difficult": 0.6040268456375839
+    },
+    "mean_probability": [
+      0.32682955265045166,
+      0.3272790312767029,
+      0.34589120745658875
+    ]
+  },
+  "quality_accepted_test_windows": {
+    "examples": 251,
+    "true_class_counts": [
+      102,
+      0,
+      149
+    ],
+    "predicted_class_counts": [
+      97,
+      28,
+      126
+    ],
+    "observed_class_accuracy": 0.5577689243027888,
+    "observed_class_balanced_accuracy": 0.5471114620344782,
+    "class_recall": {
+      "Easy": 0.49019607843137253,
+      "Difficult": 0.6040268456375839
+    },
+    "mean_probability": [
+      0.32027918100357056,
+      0.3300582766532898,
+      0.34966224431991577
+    ]
+  },
+  "per_block": {
+    "test-01": {
+      "condition": "Difficult",
+      "block_status": "complete",
+      "examples": 149,
+      "true_class_counts": [
+        0,
+        0,
+        149
+      ],
+      "predicted_class_counts": [
+        47,
+        12,
+        90
+      ],
+      "observed_class_accuracy": 0.6040268456375839,
+      "observed_class_balanced_accuracy": 0.6040268456375839,
+      "class_recall": {
+        "Difficult": 0.6040268456375839
+      },
+      "mean_probability": [
+        0.2732761800289154,
+        0.34558820724487305,
+        0.3811356723308563
+      ]
+    },
+    "test-02": {
+      "condition": "Easy",
+      "block_status": "partial",
+      "examples": 107,
+      "true_class_counts": [
+        107,
+        0,
+        0
+      ],
+      "predicted_class_counts": [
+        55,
+        16,
+        36
+      ],
+      "observed_class_accuracy": 0.514018691588785,
+      "observed_class_balanced_accuracy": 0.514018691588785,
+      "class_recall": {
+        "Easy": 0.514018691588785
+      },
+      "mean_probability": [
+        0.4014042317867279,
+        0.3017832636833191,
+        0.29681268334388733
+      ]
+    }
+  },
+  "primary_three_class_device_metric_valid": false,
+  "primary_metric_exclusion_reason": "The test phase lacks complete blocks for all three workload classes.",
+  "interpretation_boundary": "Metrics from incomplete test phases are diagnostic and are not the planned three-class real-device result. The device paradigm is a lightweight MATB implementation and differs from the public laboratory protocol."
+}

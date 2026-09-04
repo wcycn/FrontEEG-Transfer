@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "model_name": "FrontEEGNet",
+  "model_config": {
+    "channels": 2,
+    "samples": 1000,
+    "temporal_filters": 8,
+    "depth_multiplier": 2,
+    "separable_filters": 16,
+    "temporal_kernel": 125,
+    "separable_kernel": 31,
+    "dropout": 0.5,
+    "spatial_mode": "learned"
+  },
+  "classes": 3,
+  "class_names": [
+    "Easy",
+    "Medium",
+    "Difficult"
+  ],
+  "source_subjects": [
+    "sub-01",
+    "sub-02",
+    "sub-03",
+    "sub-04",
+    "sub-05",
+    "sub-06",
+    "sub-07",
+    "sub-08",
+    "sub-09",
+    "sub-10",
+    "sub-11",
+    "sub-12",
+    "sub-13",
+    "sub-14",
+    "sub-15",
+    "sub-16",
+    "sub-17",
+    "sub-18",
+    "sub-19",
+    "sub-20",
+    "sub-21",
+    "sub-22",
+    "sub-23",
+    "sub-24",
+    "sub-26",
+    "sub-29"
+  ],
+  "source_training": {
+    "best_epoch": 40,
+    "epochs_ran": 40,
+    "training_seconds": 37.849665694870055,
+    "train_windows": 23088,
+    "validation_windows": 11544,
+    "parameters": 1915,
+    "validation": {
+      "loss": 0.8783904635815346,
+      "accuracy": 0.566008316008316,
+      "balanced_accuracy": 0.566008316008316,
+      "macro_f1": 0.5527819938160913,
+      "confusion_matrix": [
+        [
+          3033,
+          489,
+          326
+        ],
+        [
+          916,
+          1278,
+          1654
+        ],
+        [
+          645,
+          980,
+          2223
+        ]
+      ]
+    }
+  },
+  "input": {
+    "channels": [
+      "Fp1",
+      "Fp2"
+    ],
+    "sampling_rate_hz": 250.0,
+    "window_seconds": 4.0,
+    "stride_seconds": 2.0,
+    "filter_hz": [
+      1.0,
+      40.0
+    ],
+    "normalization": "per-window per-channel z-score"
+  },
+  "checkpoint": "checkpoints/final_fronteegnet_source.pt"
+}
